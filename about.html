@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pratham - About</title>
+    <title>Pratham - Gallery</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -13,14 +13,10 @@
             <h1 class="logo">Pratham</h1>
             <nav>
                 <ul class="nav-links">
-                    <!-- Existing navigation links -->
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
                     <li><a href="projects.html">Projects</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="contact.html">Contact</a></li>
-
-                    <!-- Add search box as a list item -->
                     <li class="nav-search">
                         <input type="text" placeholder="Search..." class="search-input">
                         <button class="btn small primary search-btn">Go</button>
@@ -34,25 +30,39 @@
     </header>
 
     <main class="container">
-        <section class="about-section">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <p>Hi! I’m Pratham, a passionate BCA student at Inspiria Knowledge Campus, where I’m bridging the gap between theoretical knowledge and real-world tech solutions. With a keyboard in one hand and a cup of coffee in the other, I thrive on turning complex problems into elegant code.</p>
-                
-                <div class="skills">
-                    <h3>My Skills</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">HTML</span>
-                        <span class="skill-tag">CSS</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">C Programming</span>
-                        <span class="skill-tag">Git & GitHub</span>
+        <section class="gallery-section">
+            <h2>Image Gallery</h2>
+            
+            <!-- Image Slider -->
+            <div class="image-slider">
+                <!-- Radio Controls -->
+                <div class="slider-controls">
+                    <input type="radio" name="gallery-slider" id="img1" checked>
+                    <input type="radio" name="gallery-slider" id="img2">
+                    <input type="radio" name="gallery-slider" id="img3">
+                </div>
+    
+                <!-- Slides -->
+                <div class="slides">
+                    <div class="slide active">
+                        <img src="images/gallery1.jpg" alt="Gallery Image 1">
+                    </div>
+                    <div class="slide"> <!-- Remove "active" from others -->
+                        <img src="images/gallery2.jpg" alt="Gallery Image 2">
+                    </div>
+                    <div class="slide">
+                        <img src="images/gallery3.jpg" alt="Gallery Image 3">
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- Image Modal -->
+    <div class="image-modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="expanded-img">
+    </div>
 
     <footer>
         <div class="container">
