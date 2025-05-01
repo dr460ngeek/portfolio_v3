@@ -84,7 +84,9 @@ header .container {
 
 .nav-links li a:hover,
 .nav-links li a.active {
-    color: var(--primary-color);
+    color: white;
+    background-color: #1e40af;
+    border-radius: 5px;
 }
 
 .hamburger {
